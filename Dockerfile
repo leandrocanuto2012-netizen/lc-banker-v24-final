@@ -6,9 +6,9 @@ RUN apk add --no-cache git python3 make g++
 
 RUN git clone https://github.com/EvolutionAPI/evolution-api.git .
 
-RUN npm install -g pnpm && \
-    pnpm config set block-exotic-subdeps false && \
-    pnpm install --no-frozen-lockfile
+RUN echo "block-exotic-subdeps=false" > .npmrc
+
+RUN npm install -g pnpm && pnpm install --no-frozen-lockfile
 
 RUN pnpm build
 
