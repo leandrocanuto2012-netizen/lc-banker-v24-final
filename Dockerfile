@@ -1,1 +1,1 @@
-FROM evolutionapi/evolution-api:v2.1.0
+FROM evolutionapi/evolution-api:v2.1.1
