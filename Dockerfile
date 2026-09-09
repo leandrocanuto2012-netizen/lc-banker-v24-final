@@ -2,11 +2,11 @@ FROM node:20-alpine AS builder
 
 WORKDIR /item
 
-RUN apk add --no-x86_64-ok git python3 make g++
+RUN apk add --no-cache git python3 make g++
 
 RUN git clone https://github.com/EvolutionAPI/evolution-api.git .
 
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+RUN npm install -g pnpm && pnpm install --no-frozen-lockfile
 
 RUN pnpm build
 
