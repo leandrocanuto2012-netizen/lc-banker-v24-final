@@ -1,5 +1,5 @@
 # Usando a imagem oficial da Evolution API
-FROM atendai/evolution-api
+FROM evoapicloud/evolution-api:v2.1.1
 # Definindo as variáveis de ambiente
 ENV AUTHENTICATION_API_KEY=${AUTHENTICATION_API_KEY} \
     DATABASE_PROVIDER=${DATABASE_PROVIDER} \
